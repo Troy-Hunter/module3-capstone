@@ -40,13 +40,13 @@ public class ParkController {
 	@RequestMapping(path="/parkDetail/{parkCode}", method=RequestMethod.GET)
 	public String showParkDetail(@PathVariable String parkCode, ModelMap modelHolder, HttpSession session){
 		Park tempPark = new Park();
-		if(! session.getAttribute("weather").equals(null)){
-			List<Weather> tempWeather = new ArrayList<>();
-		}
+//		if(! session.getAttribute("weather").equals(null)){
+//			
+//		}
 		
 		
 		tempPark = parkDao.getParkByParkCode(parkCode);
-		List<Weather> tempWeather = (List<Weather>) session.getAttribute("weather");
+		List<Weather> tempWeather = weatherDao.allWeatherFromParkCode(parkCode);
 		modelHolder.addAttribute("park", tempPark);
 		modelHolder.addAttribute("weather", tempWeather);
 		
