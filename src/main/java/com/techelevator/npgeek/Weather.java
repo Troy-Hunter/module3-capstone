@@ -53,13 +53,28 @@ public class Weather {
 		result = result / 1.8;
 		result = result * 10;
 		if((result % 10) > 4){
-			return (int) result + 1;
+			return (int) (result / 10) + 1;
 		}
 		else if((result % 10) < 5){
-			return (int) result;
+			return (int) result / 10;
 		}
 		else{
-			return (int) result;
+			return (int) result / 10;
+		}
+		
+	}
+	
+	public int convertToFahrenheit(int temp) {
+		double result = (double) (temp * 1.8) + 32;
+		result = result * 10;
+		if((result % 10) > 4) {
+			return (int) (result / 10)+ 1;
+		}
+		else if((result % 10) < 5){
+			return (int) result / 10;
+		}
+		else{
+			return (int) result / 10;
 		}
 		
 	}

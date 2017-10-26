@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import com.techelevator.npgeek.Park;
 import com.techelevator.npgeek.ParkDAO;
+import com.techelevator.npgeek.SurveyResult;
 
 @Component
 public class ParkJDBCDAO implements ParkDAO {
@@ -80,5 +81,19 @@ public class ParkJDBCDAO implements ParkDAO {
 		}
 		
 		return tempPark;
+	}
+	
+	@Override
+	public List<Park> topFiveSurveys(){
+		List<Park> park = new ArrayList<>();
+		String sqlSelectAll = "SELECT COUNT(s.parkcode) AS count, p.parkcode, p.parkname, p.parkdescription FROM survey_result AS s JOIN park AS p ON s.parkcode = p.parkcode GROUP BY (s.parkcode), p.parkcode ORDER BY count DESC LIMIT 5";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAll);
+		while(results.next()){
+			Park tempPark = new Park();
+			tempPark.setParkName(results.getString("parkname"));
+			tempPark.setParkDescription(results.getString("parkdescription"));
+			park.add(tempPark);
+		}
+		return park;
 	}
 }

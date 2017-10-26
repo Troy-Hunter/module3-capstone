@@ -19,6 +19,7 @@ public class Park {
 	private String parkDescription;
 	private int entryFee;
 	private int numberOfAnimalSpecies;
+	private int surveyAmount;
 	
 	
 	
@@ -111,6 +112,12 @@ public class Park {
 	}
 	public void setNumberOfAnimalSpecies(int numberOfAnimalSpecies) {
 		this.numberOfAnimalSpecies = numberOfAnimalSpecies;
+	}
+	public int getSurveyAmount() {
+		return surveyAmount;
+	}
+	public void setSurveyAmount(int surveyAmount) {
+		this.surveyAmount = surveyAmount;
 	}
 	
 	

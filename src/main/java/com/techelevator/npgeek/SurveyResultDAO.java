@@ -1,5 +1,10 @@
 package com.techelevator.npgeek;
 
-public class SurveyResultDAO {
+import java.util.List;
+
+public interface SurveyResultDAO {
+
+	public List<SurveyResult> getAllSurveys();
+	public void save(SurveyResult survey);
 
 }

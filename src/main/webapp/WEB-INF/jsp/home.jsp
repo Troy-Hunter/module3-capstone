@@ -19,3 +19,5 @@
 	</c:forEach>
 	
 	</form:form>
+	
+	<%@include file="common/footer.jspf" %>

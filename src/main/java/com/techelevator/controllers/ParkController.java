@@ -39,14 +39,29 @@ public class ParkController {
 	
 	@RequestMapping(path="/parkDetail/{parkCode}", method=RequestMethod.GET)
 	public String showParkDetail(@PathVariable String parkCode, ModelMap modelHolder, HttpSession session){
-		Park tempPark = new Park();
-//		if(! session.getAttribute("weather").equals(null)){
-//			
-//		}
-		
-		
-		tempPark = parkDao.getParkByParkCode(parkCode);
+		Park tempPark = parkDao.getParkByParkCode(parkCode);		
 		List<Weather> tempWeather = weatherDao.allWeatherFromParkCode(parkCode);
+		if(session.getAttribute("preference") == null){
+			String tempLabel = "default";
+			session.setAttribute("preference", tempLabel);
+		}
+		if(session.getAttribute("preference").equals("celcius")){
+			for(int i = 0; i < tempWeather.size(); i++){
+				int newTemp = tempWeather.get(i).convertToCelcius(tempWeather.get(i).getHigh());
+				tempWeather.get(i).setHigh(newTemp);
+				int newTemp2 = tempWeather.get(i).convertToCelcius(tempWeather.get(i).getLow());
+				tempWeather.get(i).setLow(newTemp2);
+			}
+		}
+			else if(session.getAttribute("preference").equals("fahrenheit")){
+			for(int i = 0; i < tempWeather.size(); i++){
+				int newTemp = tempWeather.get(i).convertToFahrenheit(tempWeather.get(i).getHigh());
+				tempWeather.get(i).setHigh(newTemp);
+				int newTemp2 = tempWeather.get(i).convertToFahrenheit(tempWeather.get(i).getLow());
+				tempWeather.get(i).setLow(newTemp2);
+			}
+			}
+		
 		modelHolder.addAttribute("park", tempPark);
 		modelHolder.addAttribute("weather", tempWeather);
 		
@@ -55,19 +70,8 @@ public class ParkController {
 	
 	@RequestMapping(path="/parkDetail/{parkCode}", method=RequestMethod.POST)
 	public String changeTempLabel(@PathVariable String parkCode, @RequestParam String tempLabel, HttpSession session){
-		List<Weather> tempWeather = new ArrayList<>();
-		tempWeather = weatherDao.allWeatherFromParkCode(parkCode);
-		
-		if(tempLabel.equals("celcius")){
-			for(int i = 0; i < tempWeather.size(); i++){
-				int newTemp = tempWeather.get(i).convertToCelcius(tempWeather.get(i).getHigh());
-				tempWeather.get(i).setHigh(newTemp);
-				int newTemp2 = tempWeather.get(i).convertToCelcius(tempWeather.get(i).getLow());
-				tempWeather.get(i).setLow(newTemp);
-			}
-		}
-		
-		session.setAttribute("weather", tempWeather);
+	
+		session.setAttribute("preference", tempLabel);
 		
 		return "redirect:/parkDetail/" + parkCode;
 	}

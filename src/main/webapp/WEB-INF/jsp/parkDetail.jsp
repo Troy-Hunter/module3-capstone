@@ -47,7 +47,7 @@
 
 	
 	
-	<c:url var="detailUrl" value="/parkDetail"/>
+	<c:url var="detailUrl" value="/parkDetail/${park.parkCode }"/>
 	<form method="POST" action="${detailUrl}">
 	
 	<p>Fahrenheight or Celcius: </p>
@@ -56,3 +56,5 @@
 	
 	<input type="submit" value="submit"/>
 	</form>
+	
+	<%@include file="common/footer.jspf" %>
