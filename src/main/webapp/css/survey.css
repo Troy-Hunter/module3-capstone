@@ -1,0 +1,114 @@
+#survey {
+	 min-height: 75rem;
+}
+
+.text {
+	color: white;
+}
+
+.text2 {
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.text3 {
+	text-align: center;
+}
+
+.text4 {
+	text-align: center;
+}
+
+img.size {
+	width: 100%;
+	display: block;
+    margin: auto;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 100rem;
+}
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 100%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+ 
+.container {
+	display: flex;
+	padding:0px;
+}
+
+#background {
+	background-image: url("https://images.alphacoders.com/492/492919.jpg");
+	z-index: 10;
+	background-size: cover;
+	
+}
+
+.centeredtext {
+    width:100px;
+    height:100px;
+    left:50%;
+    top:10%;
+    margin-left:-50px;
+    margin-top:-50px;
+    padding: 40px;
+}
+
+.test {
+	padding-left: 43%;
+	font-weight: bold;	
+	padding: 10%;
+}
+
+.padding {
+	padding: 1%;
+}
+#background {
+	background-image: url("https://images.alphacoders.com/492/492919.jpg");
+	z-index: 10;
+	background-size: cover;
+	
+}
+
+.background2 {
+	background-image: url("https://images8.alphacoders.com/540/thumb-1920-540725.jpg");
+	z-index: 10;
+	background-size: cover;
+	
+
+

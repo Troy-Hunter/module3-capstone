@@ -3,12 +3,12 @@
 
 <c:set var="pageTitle" value="Home"/>
 <%@include file="common/header.jspf" %>
-
+<div id="background">
 	<c:url var="surveyUrl" value="/Survey"/>
+	<div class="test">
 	<form:form method="POST" action="${surveyUrl}" modelAttribute= "survey">
-	<h1>Daily Survey</h1>
-		<div>
-		<form:label path="parkCode">Choose your favorite Park!</form:label>
+	<h1 class="text">Daily Survey</h1>
+		<form:label class="text" path="parkCode">Choose your favorite Park!</form:label>
 		<form:select path="parkCode">
 			<option value="CVNP">Cuyahoga Valley National Park</option>
 			<option value="ENP">Everglades National Park</option>
@@ -21,14 +21,15 @@
 			<option value="YNP">Yellowstone National Park</option>
 			<option value="YNP2">Yosemite National Park</option>
 		</form:select>
-		</div>
-		<div>
+	
+		<div class="text">
 		<form:label path="emailAddress">Please enter your email address.</form:label>
 		<form:input path="emailAddress" type="text"/>
 		<form:errors path="emailAddress" cssClass="error"/>
-		</div>
+		</div> 
+
 		<div>
-		<form:label path="state">Select state of residence</form:label>
+		<form:label  class="text" path="state">Select state of residence</form:label>
 		<form:select path="state">
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
@@ -83,8 +84,9 @@
 			<option value="WY">Wyoming</option>
 		</form:select>
 		</div>
+		
 		<div>
-		<form:label path="activityLevel">Select anactivity level</form:label>
+		<form:label  class="text" path="activityLevel">Select an activity level</form:label>
 		<form:select path="activityLevel">
 			<option value="inactive">Inactive</option>
 			<option value="sedentary">Sedentary</option>
@@ -92,11 +94,10 @@
 			<option value="extremelyactive">Extremely Active</option>
 		</form:select>	
 		</div>
-		<div>
+		<div class="padding">
 		<input type="submit" value="Post Survey"/>
 		</div>
-		
-		
+		</div>
 	
 	</form:form>
 	
