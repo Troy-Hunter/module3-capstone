@@ -107,3 +107,18 @@ INSERT INTO weather(parkCode, fiveDayForecastValue, low, high, forecast) VALUES 
 INSERT INTO weather(parkCode, fiveDayForecastValue, low, high, forecast) VALUES ('RMNP',3,34,50,'partly cloudy');
 INSERT INTO weather(parkCode, fiveDayForecastValue, low, high, forecast) VALUES ('RMNP',4,33,47,'partly cloudy');
 INSERT INTO weather(parkCode, fiveDayForecastValue, low, high, forecast) VALUES ('RMNP',5,30,43,'rain');
+
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'b@aol.com', 'OH',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'a@aol.com', 'CO',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'c@aol.com', 'OH',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('YNP', 'g@aol.com', 'CO',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('ENP', 'wwdf@aol.com', 'OH',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'sdf@aol.com', 'CO',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'sdf@aol.com', 'OH',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'sdfsd@aol.com', 'CO',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('CVNP', 'bfsd@aol.com', 'OH',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('ENP', 'sdfsdb@aol.com', 'CO',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('ENP', 'wdf@aol.com', 'OH',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('GSMNP', 'wwdsfdf@aol.com', 'CO',  'sedentary');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('MRNP', 'wwsdfdf@aol.com', 'OH',  'active');
+INSERT INTO survey_result(parkcode, emailaddress, state, activitylevel) VALUES ('MRNP', 'wwsdfsdf@aol.com', 'CO',  'active');
