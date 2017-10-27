@@ -4,10 +4,12 @@
 <c:set var="pageTitle" value="Home"/>
 <%@include file="common/header.jspf" %>
 
-<h1>Thank you, your survey has been submitted!</h1>
+<h1>Survey Poll</h1>
 
 <c:forEach items="${parks}" var ="parks">
 	<div>
+	<c:url value="${parks.parkCode.toLowerCase()}" var="pic"/>
+	<img src="img/parks/${pic}.jpg"/>
 	<c:out value="${parks.parkName }"/>
 	<c:out value="${parks.parkDescription }"/>
 	</div><br><br>

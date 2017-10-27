@@ -92,6 +92,7 @@ public class ParkJDBCDAO implements ParkDAO {
 			Park tempPark = new Park();
 			tempPark.setParkName(results.getString("parkname"));
 			tempPark.setParkDescription(results.getString("parkdescription"));
+			tempPark.setParkCode(results.getString("parkcode"));
 			park.add(tempPark);
 		}
 		return park;

@@ -6,7 +6,7 @@
 
 	<c:url var="homeUrl" value="/"/>
 	<form:form method="GET" action="${homeUrl}">
-	
+	<div class="background">
 	<c:forEach items="${allParks}" var="park">
 		<div class="inline"><c:url value="/parkDetail/${park.parkCode}" var="parkDetail"/>
 		<c:url value="img/parks/${park.parkCode.toLowerCase()}.jpg" var="image"/>
@@ -17,7 +17,7 @@
 		<div><c:out value="${park.parkDescription}"/></div>
 		</div>
 	</c:forEach>
-	
+	</div>
 	</form:form>
 	
 	<%@include file="common/footer.jspf" %>
