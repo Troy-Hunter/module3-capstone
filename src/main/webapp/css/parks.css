@@ -7,5 +7,94 @@
 .homePicSize{
 	width:100px;
 	height: 30px;
+
 	
+}
+
+
+img.picReform{
+	border-width: 10px;
+	border-style: outset;
+	width: 50%;
+	height: auto;
+	
+}
+
+.space{
+	padding-bottom:70px;	
+}
+
+.textHome{
+	float: right;
+	
+}
+
+.textPos{
+	text-align: center;
+	
+}
+
+.col img{
+	
+}
+
+/*  Strarts detail page */
+
+.backgroundimg {
+background-image: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+background-size: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+color: white;
+}
+
+.backgroundImgHome {
+background-image: url("https://images.pexels.com/photos/53153/full-moon-moon-night-sky-53153.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+background-size: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+color: white;
+}
+
+
+.detailImage{
+	height: 400px;
+	width: 500px;
+	margin: auto;
+	display: block;
+	border-radius: 8px;
+	border: 10px;
+	border-style: solid;
+	border-color: #dfdee0;
+	width: 50%;
+	height: auto;
+}
+
+.wPic{
+	height: 150px;
+	width: 150px;
+	border-radius: 30%;
+	margin-left: 15px;
+}
+
+.wPicBig{
+	height: 200px;
+	width: 200px;
+	border-radius: 30%;
+	
+}
+.textCenter{
+	text-align: center;
+}
+.push{
+	padding-left: 80px;
+}
+
+.heading{
+font-family:"copperplate";
+font-size: 3em;
+}
+
+.fontPara{
+	font-family:"verdana";
 }

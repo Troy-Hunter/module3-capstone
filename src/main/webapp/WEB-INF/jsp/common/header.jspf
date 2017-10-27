@@ -66,7 +66,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <c:url value="/" var="home"/>
-      <c:url value="img/logo.png" var="pic"/>
+      <c:url value="/img/logo.png" var="pic"/>
         <li><a href="${home}"><img src="${pic }" class="homePicSize"/></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
