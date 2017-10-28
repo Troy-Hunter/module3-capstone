@@ -93,6 +93,7 @@ public class ParkJDBCDAO implements ParkDAO {
 			tempPark.setParkName(results.getString("parkname"));
 			tempPark.setParkDescription(results.getString("parkdescription"));
 			tempPark.setParkCode(results.getString("parkcode"));
+			tempPark.setSurveyAmount(results.getInt("COUNT"));
 			park.add(tempPark);
 		}
 		return park;

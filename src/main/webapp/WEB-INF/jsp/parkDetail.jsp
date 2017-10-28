@@ -45,7 +45,7 @@
 					<img src="${image}" class="wPicBig"/>
 					<div class="push">High: <c:out value="${weather.high}"/>&#176; </div>
 					<div class="push">Low: <c:out value="${weather.low}"/>&#176;</div>
-					<div class="push"><c:out value="${weather.forecast.toUpperCase()}"/></div>
+					<div class="push"><c:out value="${weather.forecast.toUpperCase()}"/></div><br>
 					<div class=""><c:out value="${weather.printSaying(weather.forecast) }"/>
 					<c:out value="${weather.printTempSaying(weather.high, weather.low) }"/></div>
 					</div>
@@ -67,12 +67,13 @@
 	
 	<c:url var="detailUrl" value="/parkDetail/${park.parkCode }"/>
 	<form method="POST" action="${detailUrl}">
-	
-	<p>Fahrenheight or Celcius: </p>
+	<div class="textCenter">
+<!-- 	<p>Fahrenheight or Celcius: </p> -->
 	<input type="radio" name="tempLabel" value="celcius" /> Celcius<br>
 	<input type="radio" name="tempLabel" value="fahrenheight" /> Fahrenheight<br>
 	
 	<input type="submit" value="submit"/>
+	</div>
 	</form>
 	</div>
 	<%@include file="common/footer.jspf" %>

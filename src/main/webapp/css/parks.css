@@ -2,15 +2,16 @@
 	display: inline-block;
 }
 .background{
-	background-color: #8e7658;
+	background-color: white;
 }
 .homePicSize{
 	width:100px;
 	height: 30px;
 
-	
 }
-
+.backIndividualPages{
+	background-color: #b67c36;
+}
 
 img.picReform{
 	border-width: 10px;
@@ -54,6 +55,7 @@ background-size: 100%;
 background-repeat: no-repeat;
 background-attachment: fixed;
 color: white;
+height: 100%;
 }
 
 
@@ -97,4 +99,8 @@ font-size: 3em;
 
 .fontPara{
 	font-family:"verdana";
+}
+
+.fontSize{
+	font-size: 2.5em;
 }

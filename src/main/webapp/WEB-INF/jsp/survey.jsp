@@ -7,7 +7,7 @@
 	<c:url var="surveyUrl" value="/Survey"/>
 	<div class="test">
 	<form:form method="POST" action="${surveyUrl}" modelAttribute= "survey">
-	<h1 class="text">Daily Survey</h1>
+	<h1 class="text heading">Daily Survey</h1>
 		<form:label class="text" path="parkCode">Choose your favorite Park!</form:label>
 		<form:select path="parkCode">
 			<option value="CVNP">Cuyahoga Valley National Park</option>
